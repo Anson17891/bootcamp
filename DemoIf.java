@@ -16,7 +16,7 @@ public class DemoIf {
       if(x > 2 && y < 20) { // true &&(AND) true -> true
         System.out.println("hello"); 
       }
-      if( x > 4 && y < 20) {
+      if( x > 4 || y < 20) { //true ||(or) false -> true
         System.out.println("impossible");
       } else {
         System.out.println("ok");

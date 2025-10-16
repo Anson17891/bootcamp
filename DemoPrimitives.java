@@ -43,9 +43,9 @@ public class DemoPrimitives {
       double d10 = 10.3;
       //! float f10 = d10; d10 is double(higher pricision) -> risk -> error
 
-      //! char (signal character)
+      //! char (signal character /u0000 to /uffff)
       // 'a' is a char value
-      // assign char value into cjar variable
+      // assign char value into char variable
       // single quote '' for char value   ""for String value
       char c1 = 'a';
       //! char c10 = 'a '; error, "a"+"space" have 2 characters

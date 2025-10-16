@@ -42,7 +42,7 @@ public class DemoOperator {
     System.out.println(y); // 8
 
     //! % -> remainder
-    int r= 10 % 3; // 10/3=3 , remain 1
+    int r= 10 % 3; // 10/3=3*3+1 , remain 1
     System.out.println(r); //1
 
     //Note example
