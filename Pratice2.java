@@ -3,7 +3,7 @@ public class Pratice2 {
     
   
        /* Operators
-        +, -, *, /, %, ++, --, +=, -=, *=, /=, %=, 
+        +, -, *, /, %, ++, --, +=, -=, *=, /=, %=, ...
         */
         
         //! 1. +-*/
@@ -20,9 +20,9 @@ public class Pratice2 {
         
         //! 3. ++, --
         int d = 1;
-        d++;
+        d++; //++d
         System.out.println(d); //2
-        d--;
+        d--; //--d
         System.out.println(d); //1
         
         for(int e = 0; e<10; e++){
@@ -41,6 +41,8 @@ public class Pratice2 {
         System.out.println(g); //5 // d++ + 4 => g=(d+4); d++; , d++ do after calculation
         System.out.println(d);
         
+        //f = ++d; <-not same->f = d++;
+
         //! 4. +=, -=, *=, /=, %=
         
         d = 1;
@@ -53,8 +55,8 @@ public class Pratice2 {
         
         d /= 3.0; //!result still in int
         System.out.println(d); //1
-        
-        double doubleD = d; //solution
+        //solution
+        double doubleD = d; 
         doubleD /= 3.0;
         System.out.println(doubleD);
         

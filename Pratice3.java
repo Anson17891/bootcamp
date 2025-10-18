@@ -46,6 +46,14 @@ public class Pratice3 {
        System.out.println(a>b && a<b); //false
        System.out.println(a>b || a<b); //true
        System.out.println(!aLargerB); //true
+
+       //! if
+       if(a > b){
+        System.out.println(true);
+       } else{System.out.println(false);
+       }
+       //format: if(event){action if true}else{action if else}....
+       //see excel: =if(event,if true,if false)
        
        //! Max/Min value
        
