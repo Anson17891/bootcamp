@@ -51,10 +51,12 @@ public class Pratice6 {
     d = 0.5;
     BigDecimal c1 = BigDecimal.valueOf(c);
     BigDecimal d1 = BigDecimal.valueOf(d);
+    a1 = BigDecimal.valueOf(a);
+    b1 = BigDecimal.valueOf(b);
     BigDecimal ab = a1.subtract(b1);
     BigDecimal cd = c1.subtract(d1);
     System.out.println(ab.compareTo(cd)); //0, is the same
-    System.out.println(ab.equals(cd)); //true
+    System.out.println(ab.equals(cd)); //true //!beware of 0.1 != 0.100
     System.out.println(ab.pow(2)); //0.09, in bigdecimal, pow(int x)
     System.out.println(ab.byteValue()); //0
     System.out.println(ab.floatValue()); //0.3f

@@ -14,7 +14,7 @@ public class Pratice5 {
         System.out.println(Math.sqrt(10)); //Math.cbrt() for cube root
         System.out.println(Math.pow(10.0, 0.25)); //for nth root, use pow, 
         System.out.println(Math.pow(10, 1/4));//!careful for precicion loss, 
-        //Math.pow(x,y),xy should be double
+        //Math.pow(double x, double y)
         
         System.out.println(Math.pow(10, 2)); //10^2
         

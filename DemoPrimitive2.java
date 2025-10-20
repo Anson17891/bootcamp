@@ -58,7 +58,7 @@ public class DemoPrimitive2 {
 
     //!!Excecise
     //1. form marksix number (1-49): random number
-    int markSix = new Random().nextInt(48);
+    int markSix = new Random().nextInt(49);
     System.out.println(markSix++);
     //2. 'a' - 'z' (ascii code 97 - 122) : random alphabet
     int ascii = new Random().nextInt(123-97);
