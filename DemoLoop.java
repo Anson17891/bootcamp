@@ -1,3 +1,6 @@
+
+import java.util.Scanner;
+
 public class DemoLoop {
   public static void main(String[] args) {
     
@@ -107,6 +110,13 @@ public class DemoLoop {
     System.out.println(evenSum * oddSum);
 
 
+
+    //! Scanner
+    Scanner s = new Scanner(System.in);
+    System.out.println("Please input an interger");
+    int input = s.nextInt(); //collect int value
+    int result = input * 3;
+    System.out.println("result= " + result); //input in TERMINAL
 
 
 

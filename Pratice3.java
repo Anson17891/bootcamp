@@ -6,7 +6,7 @@ public class Pratice3 {
        */
        
        //!How to assign
-       long l= 9999999999999999L; //number default to be int,  +L to become long
+       long l= 9999999999999999L; //number default to be int, 999....999 overlimit,  +L to become long
        float f = 0.111f; // every decimal # default to be double, +f to become float
        
        //!Order
