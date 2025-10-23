@@ -51,7 +51,7 @@ public class DemoPrimitive2 {
 
     long l1 = 'a'; //char->long , of cause ok
 
-    // Random
+    //! Random
     //beside of Math.random
     int r1 = new Random().nextInt(3); //0-2
     System.out.println("r1=" + r1);
@@ -65,6 +65,8 @@ public class DemoPrimitive2 {
     ascii += 97;
     char alphabet = (char)ascii;
     System.out.println(alphabet);
+
+    //!how about other primitives' random????
 
 
 

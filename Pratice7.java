@@ -80,6 +80,88 @@ public class Pratice7 {
         System.out.println();
     }
      
+   // Write a Java program that takes an array of integers and finds the second largest number in the array. You must use a for loop to iterate through the array.
+        int[] arr = new int[6];
+        arr[0] = 90;
+        arr[1] = 45;
+        arr[2] = 1;
+        arr[3] = 78;
+        arr[4] = 34;
+        arr[5] = 78;
+        
+        int largestNum = arr[0];
+        int secLargest = 0; //! don't assign to arr[0] //can use = Integer.MIN_VALUE instead
+        for(int i = 0; i < 6; i++){
+            if(arr[i] > largestNum){
+                secLargest = largestNum;
+                largestNum = arr[i];
+            }else if(arr[i] != largestNum && arr[i] > secLargest){
+                secLargest = arr[i]; //ensure arr[i]<secLargest<largest
+            }
+            System.out.println(secLargest);
+        }
+
+        //Write a Java program that takes an array of integers and determines whether any three distinct elements in the array can form a Pythagorean triplet.
+        int[] arr2 = new int[5];
+        arr2[0] = 3;
+        arr2[1] = 1;
+        arr2[2] = 4;
+        arr2[3] = 6;
+        arr2[4] = 5;
+
+        for(int i = 0; i<5; i++){
+            for(int j = 0; j<5; j++){
+                for(int k = 0; k<5; k++){
+                   int a = arr2[i];
+                   int b = arr2[j];
+                   int c = arr2[k];
+
+                   if(i != j && j != k && k != i && (Math.pow(a,2) + Math.pow(b,2)) == Math.pow(c,2)){
+                       System.out.println("Possible combination: i=" + i +";j=" + j + ";k="+k);
+                   }
+                }
+            }
+        }
+        //Write a Java program that takes an array of integers and finds the longest increasing contiguous subsequence.
+        int[] arr3 = new int[12];
+        arr3[0] = 5;
+        arr3[1] = 6;
+        arr3[2] = 3;
+        arr3[3] = 5;
+        arr3[4] = 7;
+        arr3[5] = 8;
+        arr3[6] = 1;
+        arr3[7] = 2;
+        arr3[8] = 3;
+        arr3[9] = 4;
+        arr3[10] = 5;
+        arr3[11] = 6;
+        
+        int longestStartIdx = 0;
+        int currentStartIdx = 0;
+        int currentCount = 1;
+        int maxCount = 1;
+        
+        for(int i = 1; i < arr3.length; i++){
+            if(arr3[i] > arr3[i-1]){
+                currentCount++;
+            }else if(arr3[i-1] > arr3[i]){
+                currentStartIdx = i;
+                currentCount = 1;
+            }
+            if(currentCount > maxCount){
+                maxCount = currentCount;
+                longestStartIdx = currentStartIdx; //!!!!!!!!!!!!!!
+            }  
+        }
+        
+        System.out.print("[");
+        for(int i = longestStartIdx; i < longestStartIdx + maxCount; i++){ // i < longestStartIdx + maxCount is more general representation (if there are many items)
+            if(i == longestStartIdx + maxCount - 1){
+                System.out.print(arr3[i]);
+         }else {System.out.print(arr3[i] + ", ");
+          }
+        } System.out.print("]");
 
 
 

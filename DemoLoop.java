@@ -109,14 +109,36 @@ public class DemoLoop {
     }
     System.out.println(evenSum * oddSum);
 
+    //! Loop+if+ break / continue
+    //! 1. break
+    //Searching
+    String[] names = new String[]{"John", "Peter", "Sally", "Vincent", "Steven"}; // fix-length =5
+    //Find the first names that length > 5
+    String targetName = null;
+    for(int i = 0; i < names.length; i++){
+      System.out.println("i=" + i);
+      if(names[i].length() > 5){
+      targetName = names[i];
+      break; //break the loop
+    }
+  } 
+  System.out.println(targetName);
+    
 
 
-    //! Scanner
+
+
+
+
+
+
+    /*! Scanner
     Scanner s = new Scanner(System.in);
     System.out.println("Please input an interger");
     int input = s.nextInt(); //collect int value
     int result = input * 3;
     System.out.println("result= " + result); //input in TERMINAL
+    */
 
 
 
