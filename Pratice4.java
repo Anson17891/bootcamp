@@ -17,7 +17,7 @@ public class Pratice4 {
         System.out.println(quote1.toLowerCase());
         
         //! concat() // concatenate
-        System.out.println(quote1.concat(" jump over "));
+        System.out.println(quote1.concat(" jump over "));//combine TWO items
         System.out.println(quote1.concat(""));
         //System.out.println(quote1.concat()); //!NullPointerException
         
