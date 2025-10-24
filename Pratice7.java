@@ -12,13 +12,13 @@ public class Pratice7 {
      
 
 
-    for (double i = 0; i < 10; i++){
-    double part1 = BigDecimal.valueOf((1+Math.sqrt(5))/2.0).doubleValue();
-    double part2 = BigDecimal.valueOf((1-Math.sqrt(5))/2.0).doubleValue();
-    double part3 = BigDecimal.valueOf(1/Math.sqrt(5)).doubleValue();
-    double part1a = BigDecimal.valueOf(Math.pow(part1,i)).doubleValue();
-    double part2a = BigDecimal.valueOf(Math.pow(part2,i)).doubleValue();
-    double fibonacci = BigDecimal.valueOf(part3*(part1a - part2a))//
+       for (int i = 0; i < 10; i++){
+    BigDecimal part1 = new BigDecimal((1+Math.sqrt(5))/2.0);
+    BigDecimal part2 = new BigDecimal((1-Math.sqrt(5))/2.0);
+    BigDecimal part3 = BigDecimal.valueOf(1/Math.sqrt(5));
+    BigDecimal part1a = part1.pow(i);
+    BigDecimal part2a = part2.pow(i);
+    double fibonacci = part3.multiply(part1a.subtract(part2a))//
     .setScale(2, RoundingMode.HALF_UP)//
     .doubleValue();
     System.out.println(fibonacci);
