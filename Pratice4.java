@@ -2,7 +2,9 @@ public class Pratice4 {
     public static void main(String[] args) {
         
         //! String & Methods
-        
+        // toUpperCase(), toLowerCase(), concat(), length, isEmpty(), isBlank(), charAt(), indexOf(), lastIndexOf()
+        // substring(), contain(), replace(), trim(), compareTo(), equals(), equalsInoreCase(), startsWith(), endsWith() 
+
         //!String + anything
 
         String quote1 = "The quick brown fox";

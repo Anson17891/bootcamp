@@ -66,6 +66,7 @@ public class Pratice6 {
     System.out.println(ab.remainder(d1));//0.3
     System.out.println(ab.max(ab));
     System.out.println(BigDecimal.valueOf(0.9156412616).setScale(1, RoundingMode.HALF_UP));
+    System.out.println(ab.toString()); //!
 
 
 

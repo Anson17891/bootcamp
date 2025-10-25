@@ -60,11 +60,19 @@ public class DemoPrimitive2 {
     //1. form marksix number (1-49): random number
     int markSix = new Random().nextInt(49);
     System.out.println(markSix++);
+    //solution
+    //int markSix = new Random().nextInt(49)+1;
+    //System.out.println(markSix);
+
     //2. 'a' - 'z' (ascii code 97 - 122) : random alphabet
     int ascii = new Random().nextInt(123-97);
     ascii += 97;
     char alphabet = (char)ascii;
     System.out.println(alphabet);
+    //solution
+    //int targetAscii = new Random().nextInt(26)+97;
+    //System.out.println((char) targetAscii);
+
 
     //!how about other primitives' random????
 
