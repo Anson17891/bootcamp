@@ -16,7 +16,7 @@ public class DemoMethod {
     //Testing
     System.out.println(totalLength("hello", "Leo"));//8
     System.out.println(isValidString("hello world!"));//true(>10)
-    System.out.println(isValidString("helloworld!"));//false(<10)
+    System.out.println(isValidString("helloworl"));//false(<10)
     System.out.println(multiplyNum(10));//30
     System.out.println(multiplyNum(11));//22
 
@@ -26,22 +26,13 @@ public class DemoMethod {
     String[] arr1 = new String[]{"hello","world","well"};
     System.out.println(countLl(arr1));//2
 
-
-
-
-
-
-
-
-
-
-
-
-
   }
+
+
+
   // \/method\/
   //1. sum -> method name ( can be anything) //! use verb as beginning (is, find, get, ....)
-  //2. (int x, int y) -> parameter (and their type), aka f(x,y)
+  //2. (int x, int y) -> parameter (and their type)
   //3. int -> return type (what is the type of f(x,y))
   //4. return -> end method
 
