@@ -114,22 +114,22 @@ int eCount = 0;
     for(int i = 0; i < names.length; i++){
       for(int j = 0; j < names[i].length(); j++){
         if(names[i].charAt(j) == 'e'){
-          eCount++;
+          eCount++; //Find how many 'e' first
         }
       }
     }
-      int[] arr10 = new int[eCount];
+      int[] arr10 = new int[eCount]; //num of e = length of arr10
       int idx = 0;
-      for(int i = 0; i < names.length; i++){
-      for(int j = 0; j < names[i].length(); j++){
+      for(int i = 0; i < names.length; i++){ //every name
+      for(int j = 0; j < names[i].length(); j++){ //every character in a name
         if(names[i].charAt(j) == 'e'){
-          arr10[idx] = j;
+          arr10[idx] = j;  
           idx++;
 
       }
     }
   }
-  //! Print an array -> Arrays.toString()
+  //! Print an array -> Arrays.toString(), on top: import java.util.Arrays;
   System.out.println(Arrays.toString(arr10)); 
 
   //search + count

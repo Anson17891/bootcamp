@@ -12,7 +12,11 @@ public class Pratice7 {
      
 
 
+<<<<<<< HEAD
     for (int i = 0; i < 10; i++){
+=======
+       for (int i = 0; i < 10; i++){
+>>>>>>> a7952b5acdbcf12391285d047bec4ca603353e74
     BigDecimal part1 = new BigDecimal((1+Math.sqrt(5))/2.0);
     BigDecimal part2 = new BigDecimal((1-Math.sqrt(5))/2.0);
     BigDecimal part3 = BigDecimal.valueOf(1/Math.sqrt(5));

@@ -4,7 +4,10 @@ public class Pratice4 {
         //! String & Methods
         // toUpperCase(), toLowerCase(), concat(), length, isEmpty(), isBlank(), charAt(), indexOf(), lastIndexOf()
         // substring(), contain(), replace(), trim(), compareTo(), equals(), equalsInoreCase(), startsWith(), endsWith() 
+<<<<<<< HEAD
 
+=======
+>>>>>>> a7952b5acdbcf12391285d047bec4ca603353e74
         //!String + anything
 
         String quote1 = "The quick brown fox";
@@ -19,7 +22,7 @@ public class Pratice4 {
         System.out.println(quote1.toLowerCase());
         
         //! concat() // concatenate
-        System.out.println(quote1.concat(" jump over "));
+        System.out.println(quote1.concat(" jump over "));//combine TWO items
         System.out.println(quote1.concat(""));
         //System.out.println(quote1.concat()); //!NullPointerException
         
