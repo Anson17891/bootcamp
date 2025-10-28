@@ -6,13 +6,33 @@ public class Cat {
   private int age;
 
   //!Constructor
+
+  //Empty constructor (No Parameter, suppose no "this.")
   public Cat(){
-    System.out.println("Creating a cat ...");
+    System.out.println("Creating a cat ...");//!usually leave empty
     
-    //default name and age
+    //default name and age //!usually leave empty
     this.name = "John";
     this.age = 10;
   }
+
+  //All Argument Constructor
+  public Cat(String name, int age){  //!no return type, same name as class =>constructor
+    this.name = name; //f(x,y), this.name=x  //! this=this cat you are making
+    this.age = age;
+
+  }
+
+  //!Object Method (Instance Method)          private(line 5-6)->public
+  public String getName(){
+  return this.name;
+  }
+  public int getAge(){
+    return this.age;
+  }
+
+
+
 public static void main(String[] args) {
   //Create a cat object
   //"new" -> create
@@ -24,8 +44,8 @@ public static void main(String[] args) {
   System.out.println(c1.name);//John
   System.out.println(c1.age);//10
 
-  //!only "new Cat();" -> only create a cat, but not locate it -> cannot call it
-  
+  //!only "new Cat();" no "Cat c1"-> only create a cat, but not locate it -> cannot call it
+  new Cat(); //still print
 
   Cat c2 = new Cat();
   c2.name = "Jennie";
@@ -40,10 +60,17 @@ public static void main(String[] args) {
   int[] ages = new int[]{10 , 12};// = excel column
   //object -> = excel row
 
+  //Using all argument const.
+Cat c3 = new Cat("Mary", 8);
 
-//!excersise  write a new class
+  //using empty const.
+Cat c4 = new Cat(); //Default(line 15, 16)-> John 10
 
+//!private(line 5-6)->public
+System.out.println(c3.getAge());//8
+System.out.println(c4.getAge());//10
+//! c3.age also can print out in this case, because it is same page with the CLASS attributes, not availabe when it is in other file 
+//! aka c3.age / c4.age are private, no one but author can see
 
 }
-
 }
