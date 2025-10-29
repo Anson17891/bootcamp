@@ -15,11 +15,19 @@ public class Dog {
   public Dog(){
   }
 
-  //all args contructor
+  //!all args contructor
   public Dog(double weight, double height){
     this.weight = weight;
     this.height = height;
   }
+  //Empty constructor initializes an object with default values,   (have default value)
+  //- Often used when you want to create an object and set its properties later using SETTERS.
+  //- Required by frameworks like Hibernate or Spring for object instantiation via reflection
+
+  //All-arguments constructor requires values for every field during object creation (need to input value)
+  //- Useful when you want to ensure all fields are set immediately
+  //- Common in immutable classes or when using libraries like Lombok (@AllArgsConstructor).
+
 
   //!getter (to read value)
   //for weight and height

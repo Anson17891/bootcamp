@@ -28,7 +28,7 @@ public class Circle {
     .setScale(2,RoundingMode.HALF_UP).doubleValue();
   }
   
-  public double Diameter(){
+  public double getDiameter(){
     return BigDecimal.valueOf(this.radius).multiply(BigDecimal.TWO)//
     .setScale(2,RoundingMode.HALF_UP).doubleValue();
   }
