@@ -1,24 +1,20 @@
 public class Eye {
-  private String irisColor;
-  
-  
-  public Eye(String irisColor){
-    this.irisColor = irisColor;
+ private String color;
 
+ public Eye(){
 
-  }
+ }
 
-  public void setIrisColor(String irisColor){
-    this.irisColor = irisColor;
-  }
+ public Eye(String color){
+  this.color = color;
+ }
 
+ public String getColor(){
+  return this.color;
+ }
 
-
-  public String getIrisColor(){
-    return this.irisColor;
-  }
-
-
-
+ public void setColor(String color){
+  this.color = color;
+ }
 
 }

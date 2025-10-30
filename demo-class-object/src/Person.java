@@ -1,64 +1,33 @@
 public class Person {
   private Eye[] eyes;  //new class in a class
-  private Dog[] dogs;
-
-  public Person(Eye[] eyes, Dog[] dogs){
-    this.eyes = eyes;
-    this.dogs = dogs;
-
-  }
-
-  public Eye[] getEyes(){
-    return this.eyes;
-  }
-
-  public Dog[] getDogs(){
-    return this.dogs;
-  }
-
-  public void setEyes(Eye[] eyes){
-    this.eyes = eyes;
-  }
-
-  public void setDogs(Dog[] dogs){
-    this.dogs = dogs;
-  }
-
-  public String isNormal(Eye[] eyes){
-    if(eyes.length == 2){
-      return "Is normal human";
-    }else if(eyes.length >= 2){
-      return "Is spider";
-    }else if(eyes.length ==1){
-      return "Is Cyclopes";
-    }return "Is Star-nosed mole";
-  }
   
-  public String isGay(Dog[] dogs){
-    if(dogs.length == 0){
-      return "Is gay";
-    }return "Is not gay";
+  //!API"E" (Encapsulation) 
+  public Person(){
+    this.eyes = new Eye[2]; //! Array object
+    this.eyes[0] = new Eye("Black");
+    this.eyes[1] = new Eye("Black");
   }
 
-  //!try add other new classes you created!
+  public void setLeftEye(Eye eye){
+    this.eyes[0] = eye;
+  }
 
+  public Eye getLeftEye(){
+    return this.eyes[0];
+  }
 
   public static void main(String[] args) {
-    Dog daniel = new Dog(3.0, 0.1);
-    Dog dean = new Dog(3.3, 1.0);
-    Dog[] myDogs = new Dog[]{daniel, dean};
+    Person p1 = new Person();
+    Eye e1 = new Eye("Red");
+    p1.setLeftEye(e1);   //<-create a new adress e1(line 21) that you can edit it (using .setLeftEye())
+    //p1.setLeftEye(new Eye());    <-edit eye color from p1's path
+    p1.setLeftEye(new Eye("Yellow"));//! p1 direct to NEW eye(yellow)
+    e1.setColor("Orange"); //! e1 no matter with p1 any more  <-BUG
 
-    Eye left = new Eye("Brown");
-    Eye right = new Eye("Brown");
-    Eye[] myEyes = new Eye[]{left, right};
-
-    Person me = new Person(myEyes, myDogs);
-
-
-
-    System.out.println(me.isGay(myDogs));
-
-
-
+    System.out.println(p1.getLeftEye().getColor()); //!Yellow, NOT ORANGE
   }
+
+
+ 
+  
 }

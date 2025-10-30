@@ -28,6 +28,14 @@ public class Dog {
   //- Useful when you want to ensure all fields are set immediately
   //- Common in immutable classes or when using libraries like Lombok (@AllArgsConstructor).
 
+//! Duplicated: the number of parameter and the type of parameters are same
+  // public Dog(double weight){   
+  //   this.weight = weight;
+  // }
+                                              //eg. new Dog(3.0);   <-you mean weight or height???
+  // public Dog(double height){ 
+  //   this.weight = height;
+  // }
 
   //!getter (to read value)
   //for weight and height
