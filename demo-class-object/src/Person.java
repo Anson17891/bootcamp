@@ -8,6 +8,12 @@ public class Person {
     this.eyes[1] = new Eye("Black");
   }
 
+  //changeRightEyeColor(String color)
+  public void changeRightEyeColor(String color){
+    this.eyes[1].setColor(color);
+  }
+
+
   public void setLeftEye(Eye eye){
     this.eyes[0] = eye;
   }

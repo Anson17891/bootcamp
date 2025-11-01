@@ -12,7 +12,7 @@ public class Item {
     this.quantity = quantity;
   }
   
-  public double totalAmount(){
+  public double getSubtotal(){
     return this.price * this.quantity;
   }
 

@@ -29,11 +29,18 @@ public class Order {
     BigDecimal totalAmount = BigDecimal.ZERO;
     Item[] items = this.items;
     for(Item item : items){
-      totalAmount = totalAmount.add(BigDecimal.valueOf(item.totalAmount()));
+      totalAmount = totalAmount.add(BigDecimal.valueOf(item.getSubtotal()));
     }
     return totalAmount.doubleValue();
   }
   
+  public double getSubtotal(String itemName){
+     for(Item item : this.items){
+        if(item.getName().equals(itemName)){ //! use .equals() not == for method!!!!
+          return item.getSubtotal();
+        }
+}return 0.0;
+  }
 
   public static void main(String[] args) {
     Order o1 = new Order();
