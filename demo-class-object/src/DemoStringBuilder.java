@@ -47,6 +47,7 @@ public class DemoStringBuilder {
 
 //! ^^^^Rarely use, in reality, only concat couple of strings^^^^
 //how 'bout other method?
+//sb.deleteCharAt(index);
 
 
 
