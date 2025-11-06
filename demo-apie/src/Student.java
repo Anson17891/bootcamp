@@ -1,5 +1,8 @@
 
-public class Student {
+import java.time.LocalDate;
+
+
+public class Student extends Human {  //extends: student has (inheritance) all attributes of human
 //! Static Variable  ////////!!!!!!!!!!!!!!!!!!!!!!
 //control the object from another dimension
 
@@ -20,6 +23,26 @@ public int getId(){
 public String getName(){
   return this.name;
 }
+
+public void setName(String name){
+  this.name = name;
+}
+
+//!By Default, for Inheritance, child class(Student) dnot need to write parent method again
+// public double getHeight(){ //<-what exactly work under the programme
+//   return super.getHeight()
+@Override
+public double getHeight(){//!what if you rewrite it, do override 
+  System.out.println("Student's getHeight");
+  return super.getHeight() / 100.0;
+
+}
+
+public LocalDate getParentDoB() {
+  return super.dateOfBirth; //no need return super.getdateOfBirth
+  //bcoz Parent expose dateOfBirth (see Human.java ln9 : public LocalDate dateOfBirth)
+}
+
 public static void main(String[] args) {
   Student s1 = new Student("John");
   System.out.println(s1.getId());//1
