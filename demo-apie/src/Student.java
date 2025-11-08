@@ -11,12 +11,44 @@ public static int counter = 0;
 //! Instance Variable
   private int id;
   private String name;
+  private int candyCount;
+
+  //! for bonus question
+  private Candy[] candies;
+  //!--------------------
 
 public Student(String name){
   this.id = ++counter; //! not = 0
   this.name = name;
 }
-  
+public Student(){
+  this.id = ++counter;
+  this.candyCount = 0;
+  this.candies = new Candy[0];
+}
+
+public int getCandyCount(){
+  return this.candyCount;
+}
+
+public Candy[] getCandies(){
+  return this.candies;
+}
+
+public void addCandy(){
+  this.candyCount++;
+}
+
+public void receiveCandy(Candy newCandy){
+  Candy[] newCandies = new Candy[this.candies.length+1];
+  int idx = 0;
+  for(int i = 0; i < this.candies.length; i++){
+  newCandies[idx++] = this.candies[i];
+  }
+  newCandies[idx] = newCandy;
+  this.candies = newCandies;
+}
+
 public int getId(){
   return this.id;
 }

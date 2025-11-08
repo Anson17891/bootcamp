@@ -1,14 +1,14 @@
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 
-public class Teacher {
+public class Teacher1 {
   
   public static int candyCount = 23;
 
-  private Student[] students;
+  private Student1[] students;
 
-  public Teacher(){
-this.students = new Student[0];
+  public Teacher1(){
+this.students = new Student1[0];
   }
   
 
@@ -31,7 +31,7 @@ if (students.length == 0) {
       .divide(BigDecimal.valueOf(students.length),0,RoundingMode.UP)//
       .intValue();
       for(int i = 0 ; i < timesOfDistribute + 1 ;i++){
-          for( Student student : students){
+          for( Student1 student : students){
               if(candyCount==0){
                   break;
               }
@@ -45,19 +45,19 @@ if (students.length == 0) {
   
   
   public static void main(String[] args) {
- Student s1 = new Student("Albert");
- Student s2 = new Student("Betty");
- Student s3 = new Student("Christopher");
- Student s4 = new Student("Daisy");
- Student s5 = new Student("Edmond");
- Student[] F5A = {s1, s2, s3, s4, s5};
- Teacher t1 = new Teacher();
+ Student1 s1 = new Student1("Albert");
+ Student1 s2 = new Student1("Betty");
+ Student1 s3 = new Student1("Christopher");
+ Student1 s4 = new Student1("Daisy");
+ Student1 s5 = new Student1("Edmond");
+ Student1[] F5A = {s1, s2, s3, s4, s5};
+ Teacher1 t1 = new Teacher1();
  t1.students = F5A;
  t1.distributeCandy();
- for(Student student : F5A){
+ for(Student1 student : F5A){
      System.out.println("Student " + student.getName() + " has " + student.getCandy() + " candies.");
  }
- System.out.println("Teacher has now " + Teacher.candyCount + " candy, SO SAD.");
+ System.out.println("Teacher has now " + Teacher1.candyCount + " candy, SO SAD.");
 
 System.out.println(t1.countStudentCandy(3));
      }

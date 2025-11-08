@@ -10,7 +10,7 @@
     //present: Teacher has no candy. Each student had his own candy with different color
 
 
-public class Student {
+public class Student1 {
 public static int counter = 0;
 
 //! Instance Variable
@@ -18,7 +18,7 @@ public static int counter = 0;
   private String name;
   private int candy;
 
-public Student(String name){
+public Student1(String name){
   this.id = ++counter; //! not = 0
   this.name = name;
   this.candy = 0;
