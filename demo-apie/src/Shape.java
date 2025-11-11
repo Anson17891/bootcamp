@@ -19,6 +19,25 @@ public abstract class Shape {//! Abstract->cannot create new object, the object 
     
     return this.color;
   }
+//----------exercise of Override--see Square.java--
+@Override
+  public String toString(){
+    return "Shape("//
+    +"color=" + this.color
+    +")";
+  }
+@Override
+public boolean equals(Object obj){
+  if (this == obj){
+    return true;
+  }
+  if(!(obj instanceof Shape)){
+    return false;
+  }
+  Shape shape = (Shape) obj;
+  return this.color.equals(shape.getColor());
+}
+//---------------------
 
   //!Abstract method, let child to represent the method
   public abstract double getArea(); //!no {}

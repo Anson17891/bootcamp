@@ -2,7 +2,7 @@
 import java.time.LocalDate;
 
 
-public class Student extends Human {  //extends: student has (inheritance) all attributes of human
+public class Student extends Human implements Eatable{  //extends: student has (inheritance) all attributes of human
 //! Static Variable  ////////!!!!!!!!!!!!!!!!!!!!!!
 //control the object from another dimension
 
@@ -73,6 +73,11 @@ public double getHeight(){//!what if you rewrite it, do override
 public LocalDate getParentDoB() {
   return super.dateOfBirth; //no need return super.getdateOfBirth
   //bcoz Parent expose dateOfBirth (see Human.java ln9 : public LocalDate dateOfBirth)
+}
+
+@Override
+public void eat(){
+  System.out.println("Student is eating...");
 }
 
 public static void main(String[] args) {

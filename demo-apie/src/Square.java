@@ -23,6 +23,34 @@ public class Square extends Shape{
   }
 
 
+
+  //--------exercise of 3-must-override------------
+  @Override
+  public String toString(){
+    return "Square("//
+            + "Length= "//
+            + this.length//
+            //+ ", Color= "//
+            //+ super.getColor()//
+            +", shape=" + super.toString()
+            + ")";
+  } 
+
+  @Override
+  public boolean equals(Object obj){
+    if(this == obj){
+      return true;
+    }
+    if(!(obj instanceof Square)){
+      return false;
+    }
+    Square square = (Square) obj;
+    return this.length==square.getLength() && super.equals(square); //!if super has many attribute, still need onnly one super.equals()
+  }
+  //--------------------
+
+
+
   public static void main(String[] args) {
     //! Reason of inheritance
     //1. share common attribute (readability)
@@ -43,5 +71,7 @@ public class Square extends Shape{
     total = total.add(BigDecimal.valueOf(shape.getArea()));
     System.out.println(total.doubleValue());
   }
+Square s1 = new Square(3.4, "Black");
+  System.out.println(s1.toString());
   }
 }
