@@ -47,4 +47,13 @@ public boolean equals(Object obj){
     this.color = color;
   }
 
+  //! Parent Calss can return type(class).   "Factory pattern" 
+  public static Shape getShape(int value){
+    if (value==1){
+      return new Square(1.0, "White");
+    }else if(value ==2){
+      return new Circle(2.5, "White");
+    }
+    return null;
+  }
 }

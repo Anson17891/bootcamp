@@ -33,6 +33,14 @@ public class Superman extends Human implements Flyable, Eatable{
     Flyable[] things2 = new Flyable[2];
     things2[0] = new Superman(3, 7);
     //things2[1] = new Student("John"); //error, student has no fly()
+  
+    
+    Flyable[] things3 = new Flyable[2];
+    things3[0] = new Superman(10,90);
+    things3[1] = new Superman(9, 23);
+    for(Flyable thing : things3){
+      thing.fly();
+      thing.run(); //default method, flyable object must have run()
+    }
   }
-
 }

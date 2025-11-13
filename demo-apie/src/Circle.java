@@ -20,6 +20,9 @@ public class Circle extends Shape{
   public double getArea(){
     return BigDecimal.valueOf(this.radius).pow(2).multiply(BigDecimal.valueOf(Math.PI)).setScale(2,RoundingMode.HALF_UP).doubleValue();
   }
+  public double getArea2(){
+    return radius*10;
+  }
 
   public static void main(String[] args) {
     Circle c1 = new Circle(3.5, "RED");
