@@ -20,26 +20,13 @@ public enum Direction {
     return this.label;
   }
 
-//   public Direction opposite(){
-//   switch(this.getInitial()){
-//    case 'E':
-//    return WEST;
-//    case 'W':
-//    return EAST;
-//    case 'S':
-//    return NORTH;
-//    case 'N':
-//    return SOUTH;
-//    default:
-//    return null;
-//   }
-// }
+
 public Direction opposite(){
   for(Direction direction : values()){
     if(direction.getLabel() * -1 == this.label){
       return direction;
     }
-  }
+  }return null;
 }
 
 //Static method (check if two direction value are opposite)

@@ -1,15 +1,26 @@
 public enum Suite {
-  Diamond('D'),//
-  Heart('H'),//
-  Club('C'),//
-  Spade('S');
+  Diamond(1),//
+  Heart(2),//
+  Club(3),//
+  Spade(4);
 
-  private char initial;
-  private Suite(char initial){
-    this.initial = initial;
+
+  private final int value;
+
+  private Suite(int value){
+    this.value = value;
   }
-  private char getInitial(){
-    return this.initial;
+
+  private int getValue(){
+    return this.value;
+  }
+
+  public static Suite valueOf(int value){
+    for(Suite suite : values()){
+      if(suite.getValue() == value){
+        return suite;
+      }
+    } return null;
   }
 
 }
