@@ -1,3 +1,4 @@
+import java.util.Objects;
 //!If the object has no color, then the object won't be a shape (every child classes MUST have color)
 
 //1. Abstract class not allow to create object
@@ -36,6 +37,11 @@ public boolean equals(Object obj){
   }
   Shape shape = (Shape) obj;
   return this.color.equals(shape.getColor());
+}
+
+@Override
+public int hashCode(){
+  return Objects.hash(this.color);
 }
 //---------------------
 

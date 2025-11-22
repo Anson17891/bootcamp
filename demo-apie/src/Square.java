@@ -1,5 +1,5 @@
 
-import com.sun.source.doctree.SystemPropertyTree;
+import java.util.Objects;
 import java.math.BigDecimal;
 
 public class Square extends Shape{
@@ -46,6 +46,11 @@ public class Square extends Shape{
     }
     Square square = (Square) obj;
     return this.length==square.getLength() && super.equals(square); //!if super has many attribute, still need onnly one super.equals()
+  }
+
+  @Override
+  public int hashCode(){
+    return Objects.hash(this.length, super.getColor());
   }
   //--------------------
 
