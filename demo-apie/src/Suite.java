@@ -11,7 +11,7 @@ public enum Suite {
   //   this.value = value;
   // }
 
-  // private int getValue(){
+  // public int getValue(){
   //   return this.value;
   // }
 
@@ -23,9 +23,19 @@ public enum Suite {
   //   } return null;
   // }
   //!-----------------solution\/--------------------------
-  DIAMOND,//
-  CLUB,//
-  HEART,//
-  SPADE,// add a commer convinence for add more afterward
+  DIAMOND(1),//
+  CLUB(2),//
+  HEART(3),//
+  SPADE(4),// add a commer convinence for add more afterward
   ;
+
+  private int value;
+
+  private Suite(int value){
+    this.value = value;
+  }
+
+  public int getValue(){
+    return this.value;
+  }
 }
