@@ -108,7 +108,7 @@ public class DemoString {
       System.out.println(s17.endsWith("fon"));//false
 
       //11. indexOf()
-      System.out.println(s17.indexOf("th"));//2
+      System.out.println(s17.indexOf("th"));//2  //return the first char
       System.out.println(s17.indexOf("tha"));//-1  //!cannot find->-1
 
       System.out.println(s17.indexOf('o',3)); //4   start from index 3, find 'o', 'o' at index 4
