@@ -1,6 +1,7 @@
 import java.util.Objects;
 
 public class Cat extends Animal{
+
   private String name;
 
 public Cat(String color, String name){

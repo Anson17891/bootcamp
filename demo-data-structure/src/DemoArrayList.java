@@ -59,5 +59,6 @@ public class DemoArrayList{
      //Combine 2 cat list
      //!addAll can not put singal object
      cats.addAll(cats2);
+
   }
 }
