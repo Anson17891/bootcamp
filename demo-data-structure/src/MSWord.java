@@ -19,8 +19,7 @@ public class MSWord {
   }
 
   public void undo(){
-   this.undoStack.add(this.characters.getLast());
-   this.characters.removeLast();
+  
   }
 
   public void redo(){

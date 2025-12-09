@@ -61,8 +61,8 @@ public class DemoExceptionType {
     }
 
     //!6. IllegalArgumentException (IAE)
+    Scanner s = new Scanner(System.in);
     try{
-      Scanner s = new Scanner(System.in);
       System.out.println("Please input the age:");
       int age = s.nextInt();
     double fee = calculateFee(age);

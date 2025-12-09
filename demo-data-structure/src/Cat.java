@@ -28,8 +28,8 @@ public String toString(){
 @Override
 public boolean equals(Object obj){
   if(this==obj)return true;
-  if(!(obj instanceof Cat))return false;
-  Cat cat = (Cat)obj;
+  if(!(obj instanceof Square))return false;
+  Square cat = (Square)obj;
   return Objects.equals(super.getColor(), cat.getColor())&&//
          Objects.equals(this.name, cat.getName());
 }

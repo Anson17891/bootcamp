@@ -38,7 +38,7 @@ public class DemoQueue {
     System.out.println(l1.get(1));//!List has get()
 
     ///////////////////////////////////////////////////
-    Queue<String> q2 = new ArrayDeque<>();//use LinkedList also ok, botsh implements queue
+    Queue<String> q2 = new ArrayDeque<>();//use LinkedList also ok, both implements queue
     q2.add("John");
     q2.add("Tommy");
     q2.add("Steven");

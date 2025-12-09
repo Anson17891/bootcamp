@@ -14,7 +14,7 @@ public class Calculator {
     String input = "";
     try {
         char result = firstChar(input); //case1 if the error happens here, skip to rest of lines
-        System.out.println("Check point 1"); //!not print, line 15 -(skip 16~17)>line 18 -...>32
+        System.out.println("Check point 1"); //!not print, line 16 -(skip 17~18)>line 19 -...>33
         result = firstChar(null);       //case2
     } catch (RuntimeException e) { //catch the throw //! Recover
       //do smth else

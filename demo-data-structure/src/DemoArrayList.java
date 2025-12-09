@@ -37,24 +37,24 @@ public class DemoArrayList{
 
      //Create list
      //Method1. Create ArrayList Object
-     Cat c1 = new Cat("","John");
-     Cat c2 = new Cat("","Mary");
-     ArrayList<Cat> cats = new ArrayList<>();
+     Square c1 = new Square("","John");
+     Square c2 = new Square("","Mary");
+     ArrayList<Square> cats = new ArrayList<>();
      cats.add(c1);
      cats.add(c2);
-     cats.add(new Cat("","Leo"));
+     cats.add(new Square("","Leo"));
      System.out.println(cats);
 
      //remove->for loop->cat.equals()
      //=need to override cat.equals()
      // if not-> still Object.class equals()->calling object's address
-     cats.remove(new Cat("","Leo"));//!Leo still exist if not override, two cats are different
+     cats.remove(new Square("","Leo"));//!Leo still exist if not override, two cats are different
      System.out.println(cats);
      //!remove() -> only remove first matched object
      //!try to put two Leo in the list and remove
 
      //Method 2. 
-     ArrayList<Cat> cats2 = new ArrayList<>(List.of(new Cat("","Oscar"), new Cat("","Jenny")));
+     ArrayList<Square> cats2 = new ArrayList<>(List.of(new Square("","Oscar"), new Square("","Jenny")));
 
      //Combine 2 cat list
      //!addAll can not put singal object

@@ -27,7 +27,8 @@ public class DemoPriorityQueue {
 
     //!Custom Order
                                                     //! \/ place the method(Class) here
-    Queue<Integer> integers = new PriorityQueue<>(new SortByDesc());
+    Queue<Integer> integers = new PriorityQueue<>(new SortByDesc()); //officially: new PriorityQueue<>(Comparator.reverseOrder())
+    //Queue<Integer> integers = new PriorityQueue<>(Comparator.naturalOrder());   //other sorting order, Comparator.(......) 
     integers.add(99);
     integers.add(5);
     integers.add(23);

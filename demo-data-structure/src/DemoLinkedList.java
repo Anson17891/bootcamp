@@ -3,9 +3,9 @@ import java.util.LinkedList;
 
 public class DemoLinkedList {
   public static void main(String[] args) {
-    LinkedList<Cat> cats = new LinkedList<>();
-    Cat c1 = new Cat("", "John");
-    Cat c2 = new Cat("", "Merry");
+    LinkedList<Square> cats = new LinkedList<>();
+    Square c1 = new Square("", "John");
+    Square c2 = new Square("", "Merry");
     cats.add(c1);
     cats.add(c2);
     cats.remove(c2);

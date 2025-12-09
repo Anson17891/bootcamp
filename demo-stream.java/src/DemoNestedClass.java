@@ -21,6 +21,7 @@ public int sum(int x, int y){
       return this.age;
     }
   }
+
   Person p1 = new Person(x + y);
   return p1.getAge();
   
@@ -41,20 +42,21 @@ public int sum(int x, int y){
   //!Static class
   public static class Cat{ //!Class in a class ->Nested Class
     private String name;
+    
     public Cat(String name){
       this.name = name;
     }
   }
   public static void main(String[] args) {
     //Static Nested Class
-    new DemoNestedClass.Cat("John"); //if cat is builded outside this class, has to include "DemoNestedClass.""
+    DemoNestedClass.Cat c1 = new DemoNestedClass.Cat("John"); //if cat is builded outside this class, has to include "DemoNestedClass.""
   
 
     //Inner Class
-    new DemoNestedClass().new Dog(10); //! inner class has to depend on outer class to be built
+    DemoNestedClass.Dog d1 = new DemoNestedClass().new Dog(10); //! inner class has to depend on outer class to be built
     //new Dog(10); //error
     DemoNestedClass dnc = new DemoNestedClass();
-    dnc.new Dog(10);
+    DemoNestedClass.Dog d2 = dnc.new Dog(10);
 
     new DemoNestedClass(500).new Dog(40).bark();//"40, 500"
 }

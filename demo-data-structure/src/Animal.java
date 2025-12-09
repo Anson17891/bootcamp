@@ -37,12 +37,12 @@ public abstract String makeSound();
   
 
 public static void main(String[] args) {
-  ArrayList<Cat> cats = new ArrayList<Cat>();
-  cats.add(new Cat("Brown","Tom"));
-  cats.add(new Cat("White", "Dog"));
-  cats.add(new Cat("Blue", "Jerry"));
+  ArrayList<Square> cats = new ArrayList<Square>();
+  cats.add(new Square("Brown","Tom"));
+  cats.add(new Square("White", "Dog"));
+  cats.add(new Square("Blue", "Jerry"));
 
-  for(Cat cat : cats){
+  for(Square cat : cats){
     System.out.println(cat.getColor());
     System.out.println(cat.getName());
     System.out.println(cat.makeSound());

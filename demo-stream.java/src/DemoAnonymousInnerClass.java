@@ -16,7 +16,7 @@ public class DemoAnonymousInnerClass {
     s1.fly();
 
     //!Anonymous Inner Class
-    Flyable s2 = new Flyable(){
+    Flyable s2 = new Flyable(){  //usually cannot create an interface object
       @Override           //!override the interface immediately
       public void fly(){
         System.out.println("Superman is flying...");

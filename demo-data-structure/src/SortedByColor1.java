@@ -1,5 +1,3 @@
-
-import java.awt.Color;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
@@ -16,7 +14,7 @@ public class SortedByColor1 implements Comparator<Ball>{
       return 1;
     if(b1.getColor() == Ball.Color.RED)
       return -1;
-    if(b2.getColor() ==Ball.Color.RED)
+    if(b2.getColor() == Ball.Color.RED)
       return 1;
     return -1; 
   }
@@ -31,7 +29,7 @@ public class SortedByColor1 implements Comparator<Ball>{
      balls.add(b2);
      balls.add(b3);
 
-     Collections.sort(balls, new SortedByColor1());//now balls can sort by external method->more flexible
+     Collections.sort(balls, new SortedByColor1());//now balls can sort by external method(class)->more flexible
      System.out.println(balls.toString());
   }
   

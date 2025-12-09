@@ -27,7 +27,7 @@ public class Person {
 
     public Builder name(String name){
       this.name = name;
-      return this;
+      return this;  //for chain method  
     }
     public Builder age(int age){
       this.age = age;
