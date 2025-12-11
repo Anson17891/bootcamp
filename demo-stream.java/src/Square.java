@@ -9,6 +9,10 @@ public class Square {
     this.length = builder.length;
   }
 
+  public Square(double d) {
+    this.length = d;
+  }
+
   public double getLength(){
     return this.length;
   }
