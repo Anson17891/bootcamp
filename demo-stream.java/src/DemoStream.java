@@ -3,6 +3,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class DemoStream {
   
@@ -75,5 +76,59 @@ public class DemoStream {
   Set<String> uniqueStaffNames2 = staffNames.stream()//
                                             .collect(Collectors.toSet());
                                             System.out.println(uniqueStaffNames2);
+
+  //Summary: Intermediate operation., terminal opperation
+  List<String> names4 = List.of("Sue", "Jenny", "Benny");
+  List<Character> chs = names4.stream()//
+        .filter(e-> e.endsWith("y"))//Intermediate operation ->Stream<String>
+        .map(e -> e.charAt(0))//Intermediate operation       ->Stream<Character>
+        .collect(Collectors.toList());//Terminal operation   ->List<Character>  //other than toList,toMap, toSet, etc
+        System.out.println(chs);//[J, B]
+
+  List<String> names5 = List.of("Sue", "Jenny", "Benny", "Benny");
+  long numberOfName = names5.stream()//
+        .distinct()//intermediate ->Stream<String>
+        .count();//Terminal operation ->long
+  System.out.println(numberOfName);//3
+  
+  //map + count
+  long numberOfName2 = names5.stream()//
+                             .map(e->{
+                              System.out.println("hello" + e);
+                              return e.length();
+                             })//
+                             .count();//4  //!if map + count -> skip map
+
+  //lambda + block
+  Person p1 = Person.builder().name("John").age(12).build();
+  Person p2 = Person.builder().name("Kelly").age(40).build();
+  Person p3 = Person.builder().name("Jacky").age(25).build();
+  List<Person> staffs = List.of(p1, p2, p3);
+  List<String> staffName2 = staffs.stream()//
+        .filter(e ->{
+          System.out.println("filter name=" + e.getName()); 
+          return e.getAge()>=20;
+        })//
+        .map(e -> {
+          System.out.println("map name=" + e.getName());
+          return e.getName().toUpperCase();
+        })//
+        .collect(Collectors.toList());
+  System.out.println(staffName2);
+  /*filter name=John
+filter name=Kelly
+map name=Kelly
+filter name=Jacky
+map name=Jacky */ //filter->map-(next element)>filter->map-...>
+
+
+  //Stream.class
+  Stream<String> emails = Stream.of("leo@gmail.com", "jacky@gmail.com", "jenny@gmail.com"); //dont new object  same as List.of
+  long numOfValidEmail = emails.filter(e -> e.contains("@"))// use Stream<> not need .stream(), but usally not start from stream
+        .count();                                            //usally start from list/map/set...
+        System.out.println(numOfValidEmail);//3
+
+
+
   }
 }
