@@ -1,5 +1,4 @@
 import java.util.ArrayDeque;
-
 import java.util.LinkedList;
 import java.util.Queue;
 
@@ -23,5 +22,9 @@ public static void main(String[] args) {
   Queue1 q2 = Queue1.ofLinkedList();
   q2.add("abcd1234");
 }
+
+    private void add(String abcd1234) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
   
 }
