@@ -20,6 +20,7 @@ public int getX(){
      DemoThread3 d1= new DemoThread3();
      //Lambda   runnable(no input no output)
      Runnable task = () -> {
+        //new Thread()  can create thread's thread
         for(int i = 0; i< 100000; i++){
         d1.increament();
         }
@@ -37,6 +38,7 @@ public int getX(){
 
 
      //Main Thread stand here to wait both t1 and t2 finish their tasks
+     //wait->lose time, but sometimes unavoidable 
      try{
       t1.join();
       t2.join();
