@@ -5,6 +5,13 @@ public class DemoThreadString {
     this.s += str;
   }
 
+  // partially synchronize
+  // public void add(String str){
+  //   System.out.println(xxx);  //!<- thread safe
+  //   synchronized (this) {     //!<- only syn danger part
+  //     this.s += str;        
+  //   }
+  // }
 
   public static void main(String[] args) {
     //task
