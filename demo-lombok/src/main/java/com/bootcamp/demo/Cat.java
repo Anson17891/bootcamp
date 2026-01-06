@@ -35,19 +35,55 @@ import lombok.Setter;
 public class Cat {
     private String name;
     private int age;
+    private Gun gun;
     // no more need hand typing....
     //Construcutor
     //getter
     //setter....
 
-   
+//------testing "method call method"
+    //! Dependency
+    //Cat object depends on Gun, Name, Age
+   public Cat(Gun gun, String name, int age){
+    this.gun = gun;
+    this.name = name;
+    this.age = age;}
+
+     public Cat(String name, int age){
+    this.name = name;
+    this.age = age;}
+
+    public int shoot(){   //~methodA
+    //this.gun.shoot()   //!<---in case developer take mistake, apply gun.shoot() twice -> can also get true (false diagnosis),
+                             //!need mockito.verify()
+      if(this.gun.shoot()){  //~methodB
+        return 100;
+      } return -1;        
+    }                      //!Num of test cases -> only 2(result: 100 or 1), independent to methodB
+
+
+    public void addBullet(){
+      this.gun.addBullet();
+    }
+
+//----------------------
 public void sleep(){    //auto detect
   System.out.println("Cat is sleeping...");
 }
 public static int sum(int x, int y){
   return x+y;
 }
+//--------------Method calls method(s)------------------------------
+public static int methodA(String s, int index){
+  if(s == null){return -1;}
+  if(index <0||index>=s.length()){return -2;}
+  return methodB(s,index);
+}
 
+public static char methodB(String s, int index){
+  return s.charAt(index);
+}
+//----------------------------------------------------------------
   public static void main(String[] args){
     Cat c1 = new Cat("Leo",13);
     System.out.println(c1.getName());

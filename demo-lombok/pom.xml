@@ -25,11 +25,18 @@
   </properties>
   <dependencies>
 
-    <dependency>
+    <dependency>            <!-- download lombok-->
       <groupId>org.projectlombok</groupId>
       <artifactId>lombok</artifactId>
       <version>1.18.42</version>
-    </dependency>
+    </dependency>          <!-- end-->
+
+    <dependency>              <!-- download mockito-->
+      <groupId>org.mockito</groupId>
+      <artifactId>mockito-junit-jupiter</artifactId>
+      <version>5.5.0</version>
+      <scope>test</scope>
+    </dependency>            <!-- end-->
 
     <dependency>
       <groupId>org.junit.jupiter</groupId>
