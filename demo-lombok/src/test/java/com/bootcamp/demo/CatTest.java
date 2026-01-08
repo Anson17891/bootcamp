@@ -24,7 +24,7 @@ public class CatTest {  // xxxTest(s).java  for tesing
   //! use mvn command (mvn test/mvn install...) to verify below testes
   //! Systemetically verify the code (without reading thousand of lines)
   //! test case once built keep forever -> even update the project (eg. add new class, new method), ensure existed classes/methods won't be changed 
-  //! -->(recursion)
+  //! -->(regression)
   //! if test case fail, discuss with developer (rewrite the code/ test case in not reasonable...)
 
   //! Once a test case fail, whole java-project stop
@@ -105,7 +105,7 @@ void testShoot2(){
 //!----SPY
 @Test
 void testShoot3(){
-  Mockito.when(this.gun2.shoot()).thenReturn(true); //control only part of Gun's ,method
+  Mockito.when(this.gun2.shoot()).thenReturn(true); //control only part of Gun's method, keep other methods' function
                                                      //if use Mock, have to mock addBullet() also
   Cat c1 = new Cat(this.gun2, "Leo", 11); 
 
@@ -121,6 +121,10 @@ void testShoot3(){
 
     Mockito.verify(this.gun2, Mockito.times(1)).addBullet();
     Mockito.verify(this.gun2, Mockito.times(8)).shoot();
+
+
+
+    
 }
 
     }
